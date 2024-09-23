@@ -14,19 +14,20 @@ body{
     font-weight: 400;
     color: #FFF;
 }
-.page {
-    width: 100%;
-    margin: 0 auto;
-    height: 760px;
+main{
     background: linear-gradient(rgba(22, 21, 21, 0.50),rgba(22, 21, 21, 0.50)),url("../img/background_image.jpeg") no-repeat 50%/cover;
-    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
+
 .wrapper {
-    display: flex;
+    height: 100%;
     width: 496px;
     background: rgba(233, 233, 233, 0.25);
     backdrop-filter: blur(5px);
-    margin-left: 770px;
+    margin-left: auto;
+    padding: 60px 0;
+    overflow: auto;
 }
 .container-form {
     width: 340px;
@@ -36,7 +37,7 @@ body{
 /* switch */
 
 .switch{
-    margin: 60px 0 75px;
+    margin: 0 0 75px;
 }
 .switch input{
     position: absolute;
@@ -60,16 +61,13 @@ body{
     top: 2px;
     left: 2px;
     bottom: 2px;
-    width:168px;
-    height: 30px;
+    width: 50%;
     background:#153416;
     border-radius: 30px;
     transition: all .5s linear;
 }
 .switch input:checked+label::before{
-    position: absolute;
-    left: calc(-100% 2px);
-    transform: translateX(100%);
+    transform: translateX(calc(100% - 4px));
 }
 
 /* switch with text */
@@ -91,14 +89,14 @@ body{
     font-size: 30px;
 }
 .checkbox .checkbox-input{
-    width: 100%;
-    height: 44px;
     margin: 30px 0 15px;
+}
+.input{
+    margin: 15px 0;
 }
 .checkbox-input input{
     padding: 15px 20px;
     width: 100%;
-    height: 100%;
     background: #929191;
     border: none;
     outline: none;
@@ -170,11 +168,10 @@ body{
 
 .checkbox .button {
     width: 100%;
-    height: 44px;
     background: #153416;
     border-radius: 30px;
     cursor: pointer;
-    padding: 15px 0;
+    padding: 15px;
 }
 .button a{
     display: flex;
@@ -190,7 +187,8 @@ body{
     margin-top: 40px;
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 15px;
 }
 .register-link p{
     color: #153416;
